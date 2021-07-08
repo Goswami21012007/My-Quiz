@@ -32,17 +32,17 @@ class Quiz {
     //write code here to hide question elements
 question.hide()
     //write code to change the background color here
-background(9, 99, 115)
+background( 30, 215, 232 )
     //write code to show a heading for showing the result of Quiz
 fill (255)
 textSize(30)
 text ("Result of Quiz",340,65)
-text ("..................",320,65)
+text (".....................................",310,75)
     //call getContestantInfo( ) here
-contestant.getPlayerInfo()
+Contestant.getPlayerInfo()
 
     //write condition to check if contestantInfor is not undefined
-if(allContestant!==undefined){
+if(allContestants!==undefined){
 var display_answers=230
  //write code to add a note here
 fill (255)
@@ -52,16 +52,14 @@ text("Note:Contestants who answered correct are highlighted in green color",130,
   for(var plr in allContestants)  {
 var correctAns="1"
 if(correctAns===allContestants[plr].answer){
-fill("white")
+fill("green")
 }else{
-  fill("white")
+  fill("red")
  
 }
 
 display_answers+=30
-textSize(24)
 text(allContestants[plr].name+":"+allContestants[plr].answer,250,display_answers)
-  }
 }
  
     }
@@ -72,4 +70,4 @@ text(allContestants[plr].name+":"+allContestants[plr].answer,250,display_answers
     
   
 
-
+}
